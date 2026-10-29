@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "author": "MCIOT Lab",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-hc-sr04", "id": "ultra", "top": -110, "left": 180, "attrs": {} },
+    { "type": "wokwi-led", "id": "g", "top": 60, "left": 200, "attrs": { "color": "green" } },
+    { "type": "wokwi-led", "id": "y", "top": 110, "left": 200, "attrs": { "color": "yellow" } },
+    { "type": "wokwi-led", "id": "r", "top": 160, "left": 200, "attrs": { "color": "red" } },
+    { "type": "wokwi-resistor", "id": "r1", "top": 60, "left": 150, "attrs": { "value": "220" } },
+    { "type": "wokwi-resistor", "id": "r2", "top": 110, "left": 150, "attrs": { "value": "220" } },
+    { "type": "wokwi-resistor", "id": "r3", "top": 160, "left": 150, "attrs": { "value": "220" } }
+  ],
+  "connections": [
+    [ "esp:TX0", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX0", "$serialMonitor:TX", "", [] ],
+    [ "ultra:VCC", "esp:5V", "red", [] ],
+    [ "ultra:GND", "esp:GND.1", "black", [] ],
+    [ "ultra:TRIG", "esp:5", "green", [] ],
+    [ "ultra:ECHO", "esp:18", "blue", [] ],
+    [ "esp:19", "r1:1", "green", [] ], [ "r1:2", "g:A", "green", [] ], [ "g:C", "esp:GND.2", "black", [] ],
+    [ "esp:21", "r2:1", "yellow", [] ], [ "r2:2", "y:A", "yellow", [] ], [ "y:C", "esp:GND.2", "black", [] ],
+    [ "esp:22", "r3:1", "red", [] ], [ "r3:2", "r:A", "red", [] ], [ "r:C", "esp:GND.2", "black", [] ]
+  ]
+}

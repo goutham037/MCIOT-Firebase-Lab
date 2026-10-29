@@ -1,0 +1,55 @@
+MCIOT Firebase Lab - Execution Output
+========================================
+Project: elearning-1408b (Realtime DB, asia-southeast1)
+Path: /mciot_lab
+
+All 9 task nodes written successfully (HTTP 200).
+
+Live database contents:
+{
+  "task07_location": {
+    "latitude": 17.46,
+    "longitude": 78.32,
+    "message": "You are near GRIET"
+  },
+  "task08_mpu6050": {
+    "ax": 0.12,
+    "ay": -0.03,
+    "az": 9.79,
+    "gx": 0.01,
+    "gy": 0.0,
+    "gz": 0.02,
+    "motion": "NO"
+  },
+  "task09_range": {
+    "distance_cm": 37.5,
+    "status": "NEAR"
+  },
+  "task10_ir": {
+    "count": 3,
+    "object": "DETECTED"
+  },
+  "task11_garden": {
+    "moisture": 35,
+    "pump": "ON",
+    "pump_cmd": "AUTO",
+    "temperature": 29.4
+  },
+  "task12_ambient": {
+    "humidity": 62,
+    "temperature": 30.1
+  },
+  "task13_security": {
+    "alarm": "ON",
+    "gas_level": 45,
+    "intruder": "YES"
+  },
+  "task14_apds9960": {
+    "ambient_light": 540,
+    "gesture": "SWIPE",
+    "proximity": 120
+  },
+  "task15_pir": {
+    "motion": "DETECTED"
+  }
+}

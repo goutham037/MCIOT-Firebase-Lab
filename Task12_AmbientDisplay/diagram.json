@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "author": "MCIOT Lab",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-dht22", "id": "dht", "top": -110, "left": 180, "attrs": {} },
+    { "type": "wokwi-lcd1602", "id": "lcd", "top": 100, "left": 150, "attrs": { "i2c": "1" } }
+  ],
+  "connections": [
+    [ "esp:TX0", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX0", "$serialMonitor:TX", "", [] ],
+    [ "dht:VCC", "esp:5V", "red", [] ],
+    [ "dht:GND", "esp:GND.1", "black", [] ],
+    [ "dht:SDA", "esp:15", "green", [] ],
+    [ "lcd:VCC", "esp:5V", "red", [] ],
+    [ "lcd:GND", "esp:GND.2", "black", [] ],
+    [ "lcd:SDA", "esp:21", "blue", [] ],
+    [ "lcd:SCL", "esp:22", "yellow", [] ]
+  ]
+}

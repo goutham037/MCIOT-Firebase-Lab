@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "author": "MCIOT Lab",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-pir-motion-sensor", "id": "pir", "top": -60, "left": 180, "attrs": {} },
+    { "type": "wokwi-led", "id": "led", "top": 60, "left": 240, "attrs": { "color": "red" } },
+    { "type": "wokwi-resistor", "id": "r1", "top": 60, "left": 200, "attrs": { "value": "220" } }
+  ],
+  "connections": [
+    [ "esp:TX0", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX0", "$serialMonitor:TX", "", [] ],
+    [ "pir:VCC", "esp:5V", "red", [] ],
+    [ "pir:GND", "esp:GND.1", "black", [] ],
+    [ "pir:OUT", "esp:13", "green", [] ],
+    [ "esp:2", "r1:1", "red", [] ], [ "r1:2", "led:A", "red", [] ], [ "led:C", "esp:GND.2", "black", [] ]
+  ]
+}

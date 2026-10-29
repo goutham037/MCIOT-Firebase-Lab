@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "author": "MCIOT Lab",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-pir-motion-sensor", "id": "pir", "top": -60, "left": 170, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "gas", "top": 120, "left": 180, "attrs": {} },
+    { "type": "wokwi-buzzer", "id": "bz", "top": 60, "left": 260, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:TX0", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX0", "$serialMonitor:TX", "", [] ],
+    [ "pir:VCC", "esp:5V", "red", [] ],
+    [ "pir:GND", "esp:GND.1", "black", [] ],
+    [ "pir:OUT", "esp:13", "green", [] ],
+    [ "gas:VCC", "esp:3V3", "red", [] ],
+    [ "gas:GND", "esp:GND.2", "black", [] ],
+    [ "gas:SIG", "esp:34", "blue", [] ],
+    [ "bz:1", "esp:2", "purple", [] ],
+    [ "bz:2", "esp:GND.2", "black", [] ]
+  ]
+}
