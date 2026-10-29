@@ -8,8 +8,8 @@
 
 const char* WIFI_SSID = "Wokwi-GUEST";
 const char* WIFI_PASS = "";
-String FIREBASE_HOST = "YOUR_PROJECT-default-rtdb.firebaseio.com";
-String FIREBASE_AUTH = "YOUR_DATABASE_SECRET";
+String FIREBASE_HOST = "elearning-1408b-default-rtdb.asia-southeast1.firebasedatabase.app";
+String FIREBASE_AUTH = "BV9noeROfWdPpnZ3oI6HAmHbb4kermXQqt8qYniG";
 
 #define PIR 13
 #define GAS_PIN 34        // potentiometer = gas level proxy
